@@ -1,1 +1,1 @@
-Sout("Hello);
+Sout("Command line Hello);
