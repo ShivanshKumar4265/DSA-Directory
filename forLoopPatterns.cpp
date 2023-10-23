@@ -54,13 +54,72 @@ int main(){
 
     // Power of any number
 
-    int n,i,num,pow;
-    cin>>n>>pow;
-    num = n;
-    for(i=1;i<pow;i++)
-    {
-        num = n*num;
-    }
-    cout<<num<<endl;
+    // int n,i,num,pow;
+    // cin>>n>>pow;
+    // num = n;
+    // for(i=1;i<pow;i++)
+    // {
+    //     num = n*num;
+    // }
+    // cout<<num<<endl;
 
+    // Sum of N natural number
+
+    // int n, sum = 0;
+    // cin>>n;
+    // for(int i = 1; i<=n; i++)
+    // {
+    //     sum = sum+i;
+    // }
+    // cout<<sum<<endl;
+    // // other approach
+    // cout<<n*(n+1)/2<<endl;
+
+    // Factorial of a number
+
+    // int n;
+    // cin>>n;
+    // int fact = 1;
+    // for (int i = 1; i <=n; i++)
+    // {
+    //     fact = fact*i;
+    // }
+
+    // cout<<fact<<endl;
+
+    // Program to check prime number
+
+    // int n;
+    // cin>>n;
+
+    // if(n<2)
+    // {
+    //     cout<<"Not Prime \n";
+    //     return 0;
+    // }
+    // else
+    // {
+    //     for(int i = 2; i < n; i++)
+    //     {
+    //         if(n%i == 0)
+    //         {
+    //             cout<<"Not Prime \n";
+    //             return 0;
+    //         }
+    //     }
+    //     cout<<"Prime \n";
+    // }
+
+    // Fibonacci Series
+
+    int last = 0, previous = 1, current;
+    int n;
+    cin>>n;
+    for(int i = 2; i < n; i++)
+    {
+        current = previous + last;
+        last = previous;
+        previous = current;
+    }
+    cout<<current<<endl;
 }
