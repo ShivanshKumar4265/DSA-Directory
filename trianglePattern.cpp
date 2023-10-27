@@ -31,4 +31,22 @@ int main()
         x = x + 1;
         cout<<endl;
     }
+
+    cout << endl;
+
+    for(row = 5; row > 0; row--){
+        for(column = 0; column < row; column++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    cout<<endl;
+
+    for(row = 5; row >= 1; row--){
+        for(column = 1; column<=row; column++){
+            cout<<column;
+        }
+        cout<<endl;
+    }
 }
