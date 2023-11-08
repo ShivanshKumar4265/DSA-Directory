@@ -1,5 +1,5 @@
-#include stdio.h
-#include stdlib.h
+#include <stdio.h>
+#include <stdlib.h>
 
 struct Node 
 {
@@ -43,3 +43,5 @@ int main()
 
     return 0;
 }
+
+//fixed some things !
