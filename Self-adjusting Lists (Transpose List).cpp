@@ -24,15 +24,8 @@ public:
         Node* prev = nullptr;
         while (current) {
             if (current->data == value) {
-                if (prev) {
-                    // Swap the positions of the current element and the previous element.
-                    prev->next = current->next;
-                    current->next = prev;
-                    if (prev == head) {
-                        head = current;
-                    } else {
-                        prev = current;
-                    }
+                if (prev != nullptr) {
+                    std::swap(prev->data, current->data);
                 }
                 return true;
             }
@@ -54,15 +47,25 @@ public:
 
 int main() {
     TransposeList list;
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
+
+    int n, value;
+    std::cout << "Enter the number of elements to insert: ";
+    std::cin >> n;
+    std::cout << "Enter " << n << " elements: ";
+    for (int i = 0; i < n; i++) {
+        std::cin >> value;
+        list.insert(value);
+    }
+
     list.display();
 
-    if (list.search(2)) {
-        std::cout << "Found 2" << std::endl;
+    std::cout << "Enter the value to search for: ";
+    std::cin >> value;
+
+    if (list.search(value)) {
+        std::cout << "Found " << value << std::endl;
     } else {
-        std::cout << "2 not found" << std::endl;
+        std::cout << value << " not found" << std::endl;
     }
 
     list.display();
